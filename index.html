@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saúl González Navarro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Contenido de la página -->
+<div class="menu">
+  <input type="button" class="btn1" value="Inicio" id="btn1" >
+  <input type="button" class="btn2" value="Información" id="btn2">
+  <input type="button" class="btn3" value="Formulario" id="btn3">
+</div>
+
+<div id="tab1" class="tab" class="active">
+  <h1>Inicio</h1>
+  Hola, mi nombre es <u class="nombre_inicio">Saúl González Navarro</u> y esta es la práctica evaluable 1 de HLC <br> <br>
+  <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*XFKvzn30CglSpb3o" width="300px" height="200px">
+</div>
+
+<div id="tab2" class="tab">
+  <h1>Información</h1>
+  El examen de HLC consta de las siguientes partes: <br>
+  <ul>
+    <li>Un menú lateral.</li>
+    <li>Un formulario.</li>
+    <li>Varios elementos HTML como:</li>
+    <ul>
+      <li>Títulos</li>
+      <li>Imágenes</li>
+      <li>Listas</li>
+    </ul>
+  </ul>
+  Algunos datos importantes sobre la practica son: <br><br>
+  <table border="1" >
+    <thead>
+      <tr>
+        <td>Forma de entrega</td>
+        <td>Tiempo</td>
+        <td>Calificacioón</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Github y Github Pages</td>
+        <td>2 horas</td>
+        <td>Numérica</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="tab3" class="tab">
+  <div class="formularios">
+    <h1>Formulario</h1>
+    <form novalidate>
+      <label for="nombre">Nombre:</label><br>
+        <input type="text" name="nombre" id="nombre" minlength="3" placeholder="Ingresa tu nombre" required><br><br>
+
+      <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required><br><br>
+
+      <label for="mensaje">Mensaje:</label><br>
+        <textarea type="text" name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aquí"></textarea><br><br>
+
+      <input class="boton" type="submit" onclick="return alert('Formulario enviado')" value="Enviar" >
+    </form>
+  </div>
+</div>
+  <!-- Fin contenido de la página -->
+
+  <script>
+    function showTabById(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.id === tabId);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.menu button');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tabId = button.id.replace('btn', 'tab');
+          showTabById(tabId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

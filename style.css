@@ -1,0 +1,92 @@
+body{
+    font-family: klee one , cursive;
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal; 
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active{
+    display: block;
+}
+
+.menu{
+    background-color: #4476a8;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1150px;
+    padding-bottom: 100%;
+}
+
+.btn1{
+    margin: 40px 45px 15px 40px;
+    padding: 10px;
+    background-color:#4987c5;
+    border: 0;
+    color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.btn1:hover{
+    background-color: #1abc9c;
+}
+
+.btn2{
+    margin: 0px 45px 15px 40px;
+    padding: 10px;
+    background-color:#4987c5;
+    border: 0;
+    color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.btn2:hover{
+    background-color: #1abc9c;
+}
+
+.btn3{
+    margin: 0px 45px 15px 40px;
+    padding: 10px;
+    background-color:#4987c5;
+    border: 0;
+    color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.btn3:hover{
+    background-color: #1abc9c;
+}
+
+thead{
+    background-color: #1abc9c;
+    color: white;
+}
+
+img{
+    border-radius: 15px;
+}
+
+.formularios{
+    background-color: white;
+    border-radius: 15px;
+}
+
+.nombre_inicio{
+    background-color: #d3f8f7;
+    text-decoration: none;
+}
+
+.boton{
+    padding: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 0;
+    border-radius: 2px;
+    background-color: #2980b9;
+}
